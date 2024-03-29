@@ -39,10 +39,11 @@ class ProductsCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('product_id');
+
         CRUD::column('product_name');
         CRUD::column('unit');
-        CRUD::column('price');
+        CRUD::column('price')->suffix("$");
+
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -61,10 +62,11 @@ class ProductsCrudController extends CrudController
     {
         CRUD::setValidation(ProductsRequest::class);
 
-        CRUD::field('product_id');
+
         CRUD::field('product_name');
-        CRUD::field('unit');
         CRUD::field('price');
+
+
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

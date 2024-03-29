@@ -39,8 +39,15 @@ class InvoicesCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+
         CRUD::column('invoice_id');
         CRUD::column('customer_id');
+        CRUD::addColumn([
+            'name' => 'customername', // Name it as customer_name
+            'label' => 'Customer Name', // Label for the column
+            'type' => 'text', // Display type
+          // Define entity name
+        ]);
         CRUD::column('invoice_date');
         CRUD::column('due_date');
         CRUD::column('payment_status');
@@ -48,6 +55,7 @@ class InvoicesCrudController extends CrudController
         CRUD::column('discount_type');
         CRUD::column('discount_value');
         CRUD::column('grand_total');
+        CRUD::addClause('join', 'customers', 'customers.customer_name', 'invoices.customer_id');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -66,16 +74,15 @@ class InvoicesCrudController extends CrudController
     {
         CRUD::setValidation(InvoicesRequest::class);
 
-        CRUD::field('invoice_id');
-        CRUD::field('customer_id');
-        CRUD::field('invoice_date');
-        CRUD::field('due_date');
-        CRUD::field('payment_status');
-        CRUD::field('subtotal');
-        CRUD::field('discount_type');
-        CRUD::field('discount_value');
-        CRUD::field('grand_total');
-
+        CRUD::field('customername');
+        // CRUD::field('invoice_date');
+        // CRUD::field('due_date');
+        // CRUD::field('payment_status');
+        // CRUD::field('subtotal');
+        // CRUD::field('discount_type');
+        // CRUD::field('discount_value');
+        // CRUD::field('grand_total');
+        CRUD::addClause('join', 'customers', 'customers.customername', 'invoices.customer_id');
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');

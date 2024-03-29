@@ -18,8 +18,8 @@ class Invoices extends Model
     */
 
     protected $table = 'invoices';
-    // protected $primaryKey = 'id';
-    // public $timestamps = false;
+    protected $primaryKey = 'invoice_id';
+    public $timestamps = false;
     protected $guarded = ['id'];
     // protected $fillable = [];
     // protected $hidden = [];
