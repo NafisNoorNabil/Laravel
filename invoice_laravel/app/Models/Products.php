@@ -5,17 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Invoices extends Model
+class Products extends Model
 {
-    use HasFactory;
     protected $primaryKey = 'id';
+    use HasFactory;
     protected $fillable = [
-        'order_id', 'invoice_date', 'total_amount',
+        'name', 'price', 'description',
     ];
-
-
-    public function order()
+    public function orderItems()
     {
-        return $this->belongsTo(Orders::class);
+        return $this->hasMany(OrderItems::class);
     }
 }
