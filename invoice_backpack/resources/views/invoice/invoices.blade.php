@@ -24,6 +24,7 @@
             <tr>
                 <td>{{ $invoice->order->customer->name }}</td>
                 <td>{{ $invoice->order->customer->email }}</td>
+
                 @foreach ($invoice->order->orderItems as $orderItem)
                     <td>{{ $orderItem->product->name }}</td>
                     <td>{{ $orderItem->product->price }}</td>
