@@ -10,8 +10,8 @@ class InvoiceController extends Controller
     public function invoices()    {
         // Retrieve all invoices along with their associated orders, which in turn have the customer information
         $invoices = Invoices::with('order')->get();
+
         
-// dd($invoices->order->orderItems());
         return view("invoice.invoices", ["invoices" => $invoices]);
     }
 }

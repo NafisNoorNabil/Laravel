@@ -12,16 +12,25 @@
         <tr>
             <th>Name</th>
             <th>Email</th>
+            <th>Product</th>
+            <th>Single Price</th>
+            <th>Quantity</th>
             <th>Total Amount</th>
             <th>Order Date</th>
+
+
         </tr>
         @foreach ($invoices as $invoice)
             <tr>
                 <td>{{ $invoice->order->customer->name }}</td>
                 <td>{{ $invoice->order->customer->email }}</td>
+                @foreach ($invoice->order->orderItems as $orderItem)
+                    <td>{{ $orderItem->product->name }}</td>
+                    <td>{{ $orderItem->product->price }}</td>
+                    <td>{{ $orderItem->quantity }}</td>
+                @endforeach
                 <td>{{ $invoice->total_amount }}</td>
                 <td>{{ $invoice->order->order_date }}</td>
-   
 
             </tr>
         @endforeach
