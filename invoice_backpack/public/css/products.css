@@ -1,0 +1,69 @@
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    box-shadow: 1px 4px 5px 1px rgba(71, 71, 71, 0.541);
+}
+
+body h1{
+    text-align: center;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* CSS for the edit button */
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+.delete{
+    background-color: #c01a1a;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.delete:hover {
+    background-color: rgb(150, 4, 4);
+}
+
+.add-btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 20px;
+    background-color: #8f43e6;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.add-btn:hover {
+    background-color: rgb(75, 17, 151);
+}
