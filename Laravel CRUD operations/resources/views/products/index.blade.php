@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
     <link rel="stylesheet" href="/css/table.css">
+
+    
 </head>
-<body>
-    <h1>Product</h1>
-    <table>
+<body >
+    <h1 >Product</h1>
+    <table >
         <tr>
             <th>Name</th>
             <th>QTY</th>
@@ -24,7 +26,7 @@
             <td>{{$product->price}}</td>
             <td>{{$product->description}}</td>
             <td><form method="GET" action="{{route('product.edit',['product'=>$product])}}">
-                    <button type="submit" class="edit-btn">Edit</button>
+                    <button type="submit" class="edit-btn ">Edit</button>
                 </form>
             </td>
             <td>
