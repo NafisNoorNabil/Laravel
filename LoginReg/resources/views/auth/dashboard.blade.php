@@ -12,7 +12,7 @@
 
 <body>
 <div class="flex ">
-    <nav class="  flex-row bg-[rgb(5,11,5)]  text-white font-nunito p-10  pt-12 space-y-10 ">
+    <nav class=" hidden md:block flex-row bg-[rgb(5,11,5)]  text-white font-nunito p-10  pt-12 space-y-10 ">
         <h1 class="text-xl md:text-2xl font-light text-center uppercase">Food <span class="text-red-800">Place</span></h1>
         <ul class="flex flex-col tracking-wide text-lg space-y-8">
             <div class="flex items-center ">
@@ -42,44 +42,44 @@
         </ul>
     </nav>
 
-    <div class="p-12 font-nunito bg-[#0D1515] text-white w-full space-y-4 ">
-        <div class="flex md:flex-row flex-col justify-between">
-            <h1 class="text-3xl font-semibold uppercase">Dashboard</h1>
+    <div class="flex flex-col p-12 font-nunito bg-[#0D1515] text-white w-full space-y-4 ">
+        <div class="flex md:flex-row flex-col items-center justify-between space-y-10 md:space-y-0">
+            <h1 class="text-3xl font-semibold uppercase ">Dashboard</h1>
             <div class="flex items-center">
                 <img src="search.png" alt="" class="relative left-6 w-5">
-                <input type="" placeholder="Search..." class="  pr-32   px-8 py-2 focus:outline-none bg-[#141E1E] ">
+                <input type="" placeholder="Search..." class="  pr-32  px-8 py-2 focus:outline-none bg-[#141E1E] ">
             </div>
         </div>
-        <div class="flex flex-col md:flex-row space-x-10 md:space-y-0 space-y-10 ">
-            <div class="flex flex-col text-black font-bold  rounded-md w-1/2 h-64">
+        <div class="flex flex-col md:flex-row space-x-0 md:space-x-10 md:space-y-0 space-y-10 items-center">
+            <div class="flex flex-col text-black font-bold  rounded-md w-1/2 ">
                 <div class="flex flex-col md:flex-row bg-[#152020] rounded-md rounded-b-none">
-                    <div class="flex-1 space-y-4  px-10 py-20 hover:bg-lime-300 hover:text-black border-[1px] rounded-md rounded-b-none rounded-r-none border-black text-white duration-200 border-1">
+                    <div class="flex-1 space-y-4 justify-center  px-10 py-20 hover:bg-lime-300 hover:text-black border-[1px] rounded-md rounded-b-none rounded-r-none border-black text-white duration-200 border-1">
                         <p class="text-2xl ">Visitors</p>
                         <p>30,000</p>
                     </div>
                     <div class=" space-y-4 flex-1 px-10 py-20 hover:bg-lime-300 hover:text-black border-[1px] rounded-md rounded-l-none rounded-b-none border-black text-white duration-200 border-1">
-                        <p class="text-2xl ">Contacts</p>
-                        <p>30,000</p>
+                        <p class="text-2xl ">Restaurants</p>
+                        <p>1200</p>
                     </div>
                 </div>
                 <div class="flex flex-col md:flex-row bg-[#152020] rounded-md rounded-t-none">
                     <div class="flex-1 space-y-4  px-10 py-20 hover:bg-lime-300 hover:text-black border-[1px] rounded-md border-black rounded-t-none rounded-r-none text-white duration-200 border-1">
                         <p class="text-2xl ">Contacts</p>
-                        <p>30,000</p>
+                        <p>10,000</p>
                     </div>
                     <div class="flex-1 space-y-4  px-10 py-20 hover:bg-lime-300 hover:text-black border-[1px] rounded-md border-black rounded-l-none rounded-t-none text-white duration-200 border-1">
                         <p class="text-2xl ">Revenue</p>
-                        <p>$30,000</p>
+                        <p>$40,000</p>
                     </div>
                 </div>
             </div>
             <img src="graph.png" class="rounded-md">
         </div>
 
-        <h1 class="text-xl">Orders</h1>
+        <h1 class="uppercase text-3xl font-semibold ">Orders</h1>
         <div class="overflow-x-auto">
-            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                <thead class="text-sm text-gray-700 uppercase bg-white ">
                     <tr>
                         <th scope="col" class="px-6 py-3">
                             Order ID
@@ -103,7 +103,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class=" border-b text-white ">
+                    <tr class=" border-b border-gray-700 text-white ">
                         <td class="px-6 py-4">1</td>
                         <td class="px-6 py-4">Jane Smith</td>
                         <td class="px-6 py-4">1:15 PM</td>
@@ -111,7 +111,7 @@
                         <td class="px-6 py-4">$20.75</td>
                         <td class="px-6 py-4 text-green-300">Completed</td>
                     </tr>
-                    <tr class=" border-b text-white ">
+                    <tr class=" border-b border-gray-700 text-white ">
                     <td class="px-6 py-4">2</td>
                     <td class="px-6 py-4">Jane Smith</td>
                     <td class="px-6 py-4">1:15 PM</td>
@@ -119,7 +119,7 @@
                     <td class="px-6 py-4">$20.75</td>
                     <td class="px-6 py-4 text-green-300">Completed</td>
                 </tr>
-                <tr class=" border-b  text-white">
+                <tr class=" border-b  border-gray-700 text-white">
                     <td class="px-6 py-4">3</td>
                     <td class="px-6 py-4">Jane Smith</td>
                     <td class="px-6 py-4">1:15 PM</td>
@@ -127,7 +127,7 @@
                     <td class="px-6 py-4">$20.75</td>
                     <td class="px-6 py-4 text-green-300">Completed</td>
                 </tr>
-                <tr class=" border-b  text-white">
+                <tr class=" border-b border-gray-700 text-white">
                     <td class="px-6 py-4">4</td>
                     <td class="px-6 py-4">Jane Smith</td>
                     <td class="px-6 py-4">1:15 PM</td>
