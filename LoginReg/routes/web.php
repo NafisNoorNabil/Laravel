@@ -17,10 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/login',[AuthController::class,"login"])->name("auth.login");
+Route::post('/login',[AuthController::class,"loginPost"])->name("auth.loginPost");
+Route::get('/reg',[AuthController::class,"reg"])->name("auth.reg");
+Route::post('/reg',[AuthController::class,"regPost"])->name("auth.regPost");
+Route::post('/dashboard',[AuthController::class,"destroy"])->name("auth.destroy");
+
+Route::middleware("auth")->group(function(){
+    Route::get('/dashboard',[AuthController::class,"dashboard"])->name("auth.dashboard");
+
+});
 
 
-Route::get('/login',[AuthController::class,"login"])->name("loginreg.login");
-Route::post('/login',[AuthController::class,"loginPost"])->name("loginreg.loginPost");
-
-Route::get('/reg',[AuthController::class,"reg"])->name("loginreg.reg");
-Route::post('/reg',[AuthController::class,"regPost"])->name("loginreg.regPost");
