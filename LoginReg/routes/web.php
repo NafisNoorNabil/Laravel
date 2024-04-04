@@ -21,9 +21,9 @@ Route::get('/login',[AuthController::class,"login"])->name("auth.login");
 Route::post('/login',[AuthController::class,"loginPost"])->name("auth.loginPost");
 Route::get('/reg',[AuthController::class,"reg"])->name("auth.reg");
 Route::post('/reg',[AuthController::class,"regPost"])->name("auth.regPost");
-Route::post('/dashboard',[AuthController::class,"destroy"])->name("auth.destroy");
 
 Route::middleware("auth")->group(function(){
+    Route::post('/dashboard',[AuthController::class,"destroy"])->name("auth.destroy");
     Route::get('/dashboard',[AuthController::class,"dashboard"])->name("auth.dashboard");
 
 });
