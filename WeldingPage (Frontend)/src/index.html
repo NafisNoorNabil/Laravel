@@ -75,7 +75,7 @@
     
 .slider {
 
-  height: 50rem;
+
   margin: 0 auto;
   position: relative;
   /* IN THE END */
@@ -87,7 +87,6 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 50rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +100,6 @@
 
 .dots {
   position: absolute;
-  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -139,7 +137,7 @@
 <body >
     <!-- Red Section -->
     <div class="bg-red-600">
-        <div class="flex  text-white p-2 font-nunito text-xs justify-end mx-auto max-w-7xl space-x-5">
+        <div class="flex  text-white p-2 font-nunito text-xs justify-center md:justify-end mx-auto max-w-7xl space-x-5">
             <div class="flex space-x-2 items-center">
                 <img src="images/mail.png" class="w-7 h-6" alt="">
                 <p>info@Cal-Tool.com</p>
@@ -152,7 +150,7 @@
     </div>
 
 <!-- logo, search, cart -->
-    <div class=" max-w-7xl mx-auto space-x-10 flex flex-col md:flex-row items-center  my-4 justify-center">
+    <div class=" max-w-7xl mx-auto md:space-x-10 flex flex-col md:flex-row items-center space-y-6 md:space-y-0 my-4 justify-center">
         <div class="flex space-x-2">
             <div class="border-red-500 border-2 inline-block rounded mt-2">
                 <div class="p-1">
@@ -166,8 +164,8 @@
         </div>
 
         <div class="font-nunito w-xl flex items-center">
-            <img src="images/search.png" class="contain h-6 relative left-10" alt="">
-            <input class="border-[2px] border-gray-200 px-11 py-2 w-[700px] rounded-md focus:outline-none focus:border-gray-400 " placeholder="Search" type="text">
+            <img src="images/search.png" class="contain h-6 relative  left-10" alt="">
+            <input class="border-[2px] border-gray-200  px-11 py-2 w-[400px] md:w-[700px] rounded-md focus:outline-none focus:border-gray-400 " placeholder="Search" type="text">
         </div>
         <div class="flex items-center space-x-6 font-nunito">
             <div class="flex flex-col  justify-center items-center ">
@@ -182,7 +180,7 @@
     </div>
     <!-- blue dropdown section -->
     <div class="bg-blue-950">
-        <div class=" pl-3 flex flex-col md:flex-row max-w-7xl mx-auto text-white font-nunito font-semibold space-x-14 justify-left py-2 ">
+        <div class=" pl-3 flex flex-col md:flex-row max-w-7xl mx-auto text-white font-nunito items-center  font-semibold space-y-6 md:space-y-0 md:space-x-14 justify-left py-2 ">
             <div class="dropdown">
                 <a href="">Shop Products</a>
                 <i class="fa fa-angle-down"></i>
@@ -219,14 +217,14 @@
     </div>
     <!-- slider -->
     <section class="mb-16">
-        <div class="slider">
-          <div class="slide"><img src="images/w2.jpg" class="cover" alt="Photo 1" /></div>
-          <div class="slide"><img src="images/w1.jpg" alt="Photo 2" /></div>
-          <div class="slide"><img src="images/w3.jpg" alt="Photo 3" /></div>
-          <div class="slide"><img src="images/w4.jpg" alt="Photo 4" /></div> 
-          <button class="slider__btn slider__btn--left hidden">&larr;</button>
-          <button class="slider__btn slider__btn--right hidden">&rarr;</button>
-          <div class="dots"></div>
+        <div class="slider h-[20rem] md:h-[50rem] ">
+            <div class="slide"><img src="images/w2.jpg" class="cover" alt="Photo 1" /></div>
+            <div class="slide"><img src="images/w1.jpg" alt="Photo 2" /></div>
+            <div class="slide"><img src="images/w3.jpg" alt="Photo 3" /></div>
+            <div class="slide"><img src="images/w4.jpg" alt="Photo 4" /></div> 
+            <button class="slider__btn slider__btn--left hidden">&larr;</button>
+            <button class="slider__btn slider__btn--right hidden">&rarr;</button>
+            <div class="dots bottom-[10%]"></div>
         </div>
       </section>
    
@@ -234,14 +232,14 @@
     <div>
         <h2 class=" brand text-center text-3xl font-semibold font-poppins">Featured Brands</h2>
         <div class=" max-w-6xl mx-auto flex flex-col  items-center  justify-between md:flex-row md:space-y-0 md:space-x-12">
-            <img src="images/brand1.png" class="contain w-60" alt="">
-            <img src="images/brand2.png" class="contain w-60" alt="">
-            <img src="images/brand3.png" class="contain w-60" alt="">
+            <img src="images/brand1.png" class="object-contain w-60" alt="">
+            <img src="images/brand2.png" class="object-contain w-60" alt="">
+            <img src="images/brand3.png" class="object-contain w-60" alt="">
         </div>
     </div>
 
     <!-- featured Categories-->
-    <div class=" max-w-6xl my-10 mt-20 mx-auto text-left font-poppins ">
+    <div class="mx-4 max-w-6xl my-10 mt-20 md:mx-auto text-left font-poppins ">
         <div class="flex justify-between items-center">
             <h1 class="text-left font-semibold">Featured Categories</h1>
             <div class="flex space-x-5 items-center">
@@ -254,35 +252,37 @@
             </div>
         </div>
         <div class="w-4xl gap-5 justify-center items-center my-10 grid lg:grid-cols-4 grid-cols-2 ">
-
             <div class="hover:shadow-lg border-[1px] border-gray-200 hover:border-none duration-200 rounded ">
-                <img src="images/category1.jpg" class="cover h-40 w-60"  alt="">
+                <img src="images/category2.jpg"  alt="">
                 <hr>
                 <p class="p-2 pb-6 text-left font-semibold text-gray-800">Black Friday Specials</p>
             </div>
             <div class="hover:shadow-lg border-[1px] border-gray-200 hover:border-none duration-200 rounded">
 
-                <img src="images/category2.jpg" class="cover h-40 w-auto" alt="">
+                <img src="images/category2.jpg"  alt="">
                 <hr>
                 <p class="p-2 pb-6 text-left font-semibold text-gray-800">Arasives</p>
             </div>
             <div class="hover:shadow-lg border-[1px] border-gray-200 hover:border-none duration-200 rounded">
-                <img src="images/category3.jpg" class="cover h-40 w-auto" alt="">
+                <img src="images/category3.jpg"  alt="">
                 <hr>
                 <p class="p-2 pb-6 text-left font-semibold text-gray-800">Safety Gear</p>
             </div>
             <div class="hover:shadow-lg border-[1px] border-gray-200 hover:border-none duration-200 rounded">
                 <img src="" alt="">
-                <img src="images/category4.jpg" class="cover h-40 w-auto" alt="">
+                <img src="images/category3.jpg" alt="">
                 <hr>
                 <p class="p-2 pb-6 text-left font-semibold text-gray-800">Tools and Hardware</p>
             </div>
         </div>
     </div>
+
+
     <!-- featured Products-->
-    <div class=" max-w-6xl mx-auto text-left mb-36 mt-20 font-poppins ">
+    <div class="mx-4  max-w-6xl md:mx-auto text-left mb-36 mt-20 font-poppins ">
         <div class=" max-w-6xl mx-auto my-10 text-center  font-poppins ">
             <div class="flex justify-between items-center">
+              
                 <h1 class=" featured text-left ">Featured Products</h1>
                 <div class="flex space-x-5 items-center">
                     <button class="navigate">
@@ -296,30 +296,34 @@
         </div>
         
         <div class=" grid lg:grid-cols-4 grid-cols-2 gap-5">
-            <div class=" flex flex-col  space-y-2 text-center py-5 px-5 border-[1px] border-gray-200">
+            <div class=" flex flex-col  space-y-2 text-center py-5 px-5 hover:shadow-lg border-[1px] border-gray-200 hover:border-none duration-200 rounded ">
+                <img src="images/hammer.jpg" class="h-20 object-contain" alt="">
                 <h2 class="text-base font-semibold tracking-tight text-gray-800">Welding Chipping Hammer</h2>
                 <p class="text-gray-600 text-sm">Part Number</p>
                 <p class="text-gray-600 text-sm">MPN:W112456</p>
                 <p class="font-semibold">$80.00</p>
                 <button class="uppercase border-[1px] border-blue-950 rounded w-full font-semibold hover:bg-blue-950 hover:text-white duration-300 py-1">Add To Cart</button>
             </div>
-            <div class=" flex flex-col  space-y-2 text-center py-5 px-5 border-[1px] border-gray-200">
+            <div class=" flex flex-col  space-y-2 text-center py-5 px-5 hover:shadow-lg border-[1px] border-gray-200 hover:border-none duration-200 rounded ">
+                <img src="images/hammer.jpg" class="h-20 object-contain" alt="">
                 <h2 class="text-base font-semibold tracking-tight text-gray-800">Welding Chipping Hammer</h2>
                 <p class="text-gray-600 text-sm">Part Number</p>
                 <p class="text-gray-600 text-sm">MPN:W112456</p>
                 <p class="font-semibold">$80.00</p>
                 <button class="uppercase border-[1px] border-blue-950 rounded w-full font-semibold hover:bg-blue-950 hover:text-white duration-300 py-1">Add To Cart</button>
             </div>
-            <div class=" flex flex-col  space-y-2 text-center py-5 px-5 border-[1px] border-gray-200">
+            <div class=" flex flex-col  space-y-2 text-center py-5 px-5 hover:shadow-lg border-[1px] border-gray-200 hover:border-none duration-200 rounded ">
+                <img src="images/hammer.jpg" class="h-20 object-contain" alt="">
                 <h2 class="text-base font-semibold tracking-tight text-gray-800">Welding Chipping Hammer</h2>
                 <p class="text-gray-600 text-sm">Part Number</p>
                 <p class="text-gray-600 text-sm">MPN:W112456</p>
                 <p class="font-semibold">$80.00</p>
                 <button class="uppercase border-[1px] border-blue-950 rounded w-full font-semibold hover:bg-blue-950 hover:text-white duration-300 py-1">Add To Cart</button>
             </div>
-            <div class=" flex flex-col  space-y-2 text-center py-5 px-5 border-[1px] border-gray-200">
+            <div class=" flex flex-col  space-y-2 text-center py-5 px-5 hover:shadow-lg border-[1px] border-gray-200 hover:border-none duration-200 rounded ">
+                <img src="images/hammer.jpg" class="h-20 object-contain" alt="">
                 <h2 class="text-base font-semibold tracking-tight text-gray-800">Welding Chipping Hammer</h2>
-                <p class="text-gray-600 text-sm">Part Number</p>
+                <p class="text-gray-600 text-sm ">Part Number</p>
                 <p class="text-gray-600 text-sm">MPN:W112456</p>
                 <p class="font-semibold">$80.00</p>
                 <button class="uppercase border-[1px] border-blue-950 rounded w-full font-semibold hover:bg-blue-950 hover:text-white duration-300 py-1">Add To Cart</button>
@@ -331,16 +335,19 @@
             <h1 class="font-semibold">Our Brands</h1>
             <div class="my-10 grid lg:grid-cols-3 grid-cols-2 gap-5 ">
                 <div class=" flex flex-col pt-10 pb-4 space-y-2 textlefgtpy-5 px-5 border-[1px] border-gray-200">
-                    <p class="font-semibold">Servotek</p>
+                    <img src="images/our1.jpg"class="h-32 object-cover" alt="">
+                    <p class="font-semibold">Tri-City</p>
                     <p class="text-gray-600 text-sm">Lorem ipsum d eveniet aspernatur molestiae. Accusantium explicabo dolores corporis modi place <span class="text-red-500 font-semibold">See more</span></p>
                 </div>
 
                 <div class=" flex flex-col pt-10 pb-4 space-y-2 textlefgtpy-5 px-5 border-[1px] border-gray-200">
-                    <p class="font-semibold">Servotek</p>
+                    <img src="images/our3.jpg"class="h-32 object-contain" alt="">
+                    <p class="font-semibold">Ortiz</p>
                     <p class="text-gray-600 text-sm">Lorem ipsum d eveniet aspernatur molestiae. Accusantium explicabo dolores corporis modi place <span class="text-red-500 font-semibold">See more</span></p>
                 </div>
                 <div class=" flex flex-col pt-10 pb-4 space-y-2 textlefgtpy-5 px-5 border-[1px] border-gray-200">
-                    <p class="font-semibold">Servotek</p>
+                    <img src="images/our2.jpg"class="h-32 object-contain" alt="">
+                    <p class="font-semibold">Olenders</p>
                     <p class="text-gray-600 text-sm">Lorem ipsum d eveniet aspernatur molestiae. Accusantium explicabo dolores corporis modi place <span class="text-red-500 font-semibold">See more</span></p>
                 </div>
             </div>
@@ -350,22 +357,22 @@
     <!-- footer -->
     
     <footer class="bg-[#11213df8] relative">
-        <div class="max-w-6xl mx-auto py-14 px-16 bg-red-600 text-white rounded-lg font-poppins absolute -top-24 left-0 right-0 ">
-            <div class="flex justify-between items-center">
-                <div class="flex space-y-4 flex-col">
-                    <h1 class="font-semibold">Unlock Insider Deals!</h1>
-                    <p>Join our newsletter for Offers, Latest News and receive a 10% discount on your first order.</p>
+        <div class="max-w-6xl mx-auto py-14 px-6 md:px-16 bg-red-600 text-white rounded-lg font-poppins md:absolute md:-top-24 left-0 right-0 ">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="flex space-y-4 flex-col text-center md:text-left">
+                    <h1 class="font-semibold text-2xl md:text-3xl">Unlock Insider Deals!</h1>
+                    <p class="text-sm">Join our newsletter for Offers, Latest News and receive a 10% discount on your first order.</p>
                 </div>
                 <div class="flex space-x-4">
-                    <button class="px-4 py-2 text-sm  bg-white font-semibold text-blue-950 rounded-md">Learn More</button>
-                    <button class="px-4 py-2 text-sm  bg-blue-950  text-white  rounded-md">Get Started</button>
+                    <button class="px-2  md:px-4 py-2 text-sm  bg-white font-semibold text-blue-950 rounded-md hover:bg-blue-950 hover:text-white duration-300">Learn More</button>
+                    <button class="px-2  md:px-4 py-2 text-sm  bg-blue-950  font-semibold text-white  rounded-md hover:bg-white hover:text-black duration-300">Get Started</button>
                 </div>
             </div>
         </div>
 
-        <div class="max-w-6xl mx-auto text-center  py-20">
-            <div class="flex flex-col items-center justify-between flex-1 mb-10 space-y-6 font-nunito md:flex-row md:mb-0 md:space-y-0 text-white py-16">
-                <div class=" flex flex-col space-y-4 md:flex-row  md:space-x-24 md:space-y-0">
+        <div class="max-w-6xl mx-auto text-center  md:py-20">
+            <div class="flex flex-col items-center justify-between flex-1 mb-10 space-y-6  font-nunito md:flex-row md:mb-0 md:space-y-0 text-white py-16">
+                <div class=" flex flex-col  space-y-8 md:flex-row  md:space-x-24 md:space-y-0">
                     <div>
                         <div class="flex space-x-2 items-center text-left  max-w-[300px]">
                             <div class="border-white border-2 inline-block rounded mt-2">
@@ -382,7 +389,7 @@
 
                     </div>
 
-                    <div class="flex flex-col space-y-2 text-center md:text-left">
+                    <div class="flex flex-col space-y-2  text-center md:text-left">
                         <h2 class="font-semibold text-xl">Our Service Area</h2>
                         <p>Inland Empire</p>
                         <p>LA County</p>
@@ -409,12 +416,12 @@
                             <p >201 Main Street</p>
                             <p >Riverside, CA 92501</p>
                         </div>
-                        <div class="flex flex-col space-y-2">
-                            <div class="flex space-x-2 items-center">
+                        <div class="flex flex-col space-y-2 ">
+                            <div class="flex space-x-2 items-left  justify-center md:justify-start">
                                 <img src="images/mail.png" class="w-7 h-6" alt="">
                                 <p>info@Cal-Tool.com</p>
                             </div>
-                            <div class="flex space-x-2 items-center">
+                            <div class="flex space-x-2 items-left justify-center md:justify-start">
                                 <img src="images/phone.png" class="w-7 h-6" alt="">
                                 <p>(951) 686-7822</p>
                             </div>
@@ -424,9 +431,9 @@
                 </div>
             </div>
             <hr>
-            <div class="flex justify-between my-4 font-nunito">
+            <div class="flex flex-col md:flex-row justify-between px-4 py-16 md:py-4 space-y-4 md:space-y-0 font-nunito">
                 <p class="text-gray-300">@ 2024 California Tool & welding suppy. All rights reserved.</p>
-                <div class="social flex space-x-4">
+                <div class="social flex space-x-4 justify-center ">
                     <img src="images/twitter.png" class="w-5 h-5 fill-current text-white ">
                     <img src="images/twitter.png" class="w-5 h-5 fill-current text-white">
                     <img src="images/twitter.png" class="w-5 h-5 fill-current text-white">
